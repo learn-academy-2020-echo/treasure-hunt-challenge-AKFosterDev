@@ -10,6 +10,10 @@ class App extends Component {
 		}
 	}
 
+	handleGamePlay = (index) => {
+		alert(index)
+	}
+
 	render() {
 		// destructure variable from state
 		let { squares } = this.state
@@ -18,7 +22,14 @@ class App extends Component {
 				<h1>Treasure Hunt App</h1>
 				<div id='gameboard'>
 					{squares.map((value, index) => {
-						return <Square value={value} key={index} />
+						return (
+							<Square
+								value={value}
+								key={index}
+								index={index}
+								handleGamePlay={this.handleGamePlay}
+							/>
+						)
 					})}
 				</div>
 			</React.Fragment>
