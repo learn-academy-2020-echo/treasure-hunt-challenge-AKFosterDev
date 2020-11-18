@@ -6,7 +6,7 @@ class Square extends Component {
 	}
 
 	render() {
-		let { value } = this.props
+		const { value } = this.props
 		return (
 			<React.Fragment>
 				<div id='square' onClick={this.handleClick}>
